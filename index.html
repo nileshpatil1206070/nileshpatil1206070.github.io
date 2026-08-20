@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nilesh Patil | Data Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Navigation / Header -->
+  <header class="max-w-5xl mx-auto px-6 pt-12 pb-6 flex flex-col md:flex-row justify-between items-center border-b border-slate-800 gap-4">
+    <div>
+      <h1 class="text-3xl font-bold tracking-tight text-cyan-400">Nilesh Patil</h1>
+      <p class="text-slate-400 mt-1">MSc Data Science (Coventry University UK) • 2+ YOE Data Engineering</p>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="https://www.linkedin.com/in/nilesh-patil-6ab4a0121/" target="_blank" class="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors border border-slate-700">LinkedIn</a>
+      <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-sm px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-white font-medium transition-colors">GitHub</a>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+    <!-- About Section -->
+    <section class="space-y-4">
+      <h2 class="text-xl font-semibold text-cyan-300">About Me</h2>
+      <p class="text-slate-300 text-base leading-relaxed">
+        Data Engineer with 2+ years of experience specializing in building production Lakehouse architectures, Medallion pipelines, and scalable data models on Databricks, Spark, and AWS. Background includes an MSc in Data Science from Coventry University (UK), focused on turning disparate operational data into governed, BI-ready data layers.
+      </p>
+      <!-- Skills Badges -->
+      <div class="flex flex-wrap gap-2 pt-2">
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Databricks</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Apache Spark / PySpark</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Spark Declarative Pipelines (SDP)</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Medallion Architecture</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Unity Catalog</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Auto CDC / SCD</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Star Schema / Data Modeling</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Amazon S3</span>
+        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">SQL & Python</span>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section (2 Projects) -->
+    <section class="space-y-6">
+      <h2 class="text-xl font-semibold text-cyan-300">Featured Data Engineering Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <!-- Project 1: FMCG M&A Medallion Lakehouse -->
+        <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 hover:border-slate-700 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex flex-col gap-1">
+              <span class="text-xs text-cyan-400 font-mono">Databricks • Delta Lake • Medallion • Star Schema • AWS S3</span>
+              <h3 class="font-bold text-xl text-white">FMCG Acquisition Data Unification Lakehouse</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Designed and deployed an end-to-end Medallion Lakehouse on Databricks to resolve multi-source data bottlenecks following the acquisition of a high-growth nutrition startup (Sportsbar) by a global sports equipment manufacturer (Atlikon).
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+              <li><strong class="text-slate-200">Data Ingestion:</strong> Centralized chaotic multi-source inputs (APIs, CSV exports, spreadsheets) into Amazon S3 storage buckets.</li>
+              <li><strong class="text-slate-200">Processing Strategy:</strong> Built historical backfill pipelines for 5 months of batch data alongside an automated incremental pipeline for ongoing updates.</li>
+              <li><strong class="text-slate-200">Medallion Design:</strong> Implemented Bronze (raw), Silver (cleansed/validated), and Gold layers with Databricks Unity Catalog governance.</li>
+              <li><strong class="text-slate-200">Dimensional Modeling:</strong> Modeled a high-performance Star Schema (1 Fact Order table + 4 Dimension tables) merging startup and enterprise operations into a unified BI layer.</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-xs font-semibold text-cyan-400 hover:underline inline-flex items-center gap-1">
+              View Repository & Architecture →
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2: Transportation SDP Lakehouse -->
+        <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 hover:border-slate-700 flex flex-col justify-between space-y-4">
+          <div class="space-y-3">
+            <div class="flex flex-col gap-1">
+              <span class="text-xs text-cyan-400 font-mono">Spark Declarative Pipelines (SDP) • Unity Catalog • Auto CDC • PySpark</span>
+              <h3 class="font-bold text-xl text-white">Declarative Lakehouse & Auto-CDC Platform</h3>
+            </div>
+            <p class="text-slate-300 text-sm leading-relaxed">
+              Built an automated, declarative lakehouse pipeline using Databricks LakeFlow and Medallion Architecture for "Good Caps" transportation network, eliminating late operational reporting and manual query restructuring across regional hubs.
+            </p>
+            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
+              <li><strong class="text-slate-200">Declarative Pipelines:</strong> Replaced procedural scripts with LakeFlow Spark Declarative Pipelines (SDP) and materialized views, letting Spark handle dependency management and execution optimization.</li>
+              <li><strong class="text-slate-200">Data Quality & CDC:</strong> Ingested dimensional and transactional files from S3 with automated <code class="text-cyan-400">cloudFiles</code>, applied Silver layer data quality Expectations, and implemented Auto CDC for slowly changing dimensions (SCD).</li>
+              <li><strong class="text-slate-200">Temporal & Aggregated Gold Views:</strong> Programmatically generated a custom calendar dimension and built Gold-layer aggregations (driver/passenger ratings, trip counts, regional revenue).</li>
+            </ul>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80">
+            <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-xs font-semibold text-cyan-400 hover:underline inline-flex items-center gap-1">
+              View Repository & Architecture →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-8 text-xs text-slate-500 border-t border-slate-900">
+    © 2026 Nilesh Patil • Hosted on GitHub Pages
+  </footer>
+
+</body>
+</html>
