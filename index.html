@@ -3,102 +3,332 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nilesh Patil | Data Engineer</title>
+  <title>Nilesh Patil | Data Engineer & Data Scientist</title>
+  
+  <!-- Inter & JetBrains Mono Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
 
-  <!-- Navigation / Header -->
-  <header class="max-w-5xl mx-auto px-6 pt-12 pb-6 flex flex-col md:flex-row justify-between items-center border-b border-slate-800 gap-4">
-    <div>
-      <h1 class="text-3xl font-bold tracking-tight text-cyan-400">Nilesh Patil</h1>
-      <p class="text-slate-400 mt-1">MSc Data Science (Coventry University UK) • 2+ YOE Data Engineering</p>
-    </div>
-    <div class="flex items-center gap-4">
-      <a href="https://www.linkedin.com/in/nilesh-patil-6ab4a0121/" target="_blank" class="text-sm px-4 py-2 bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors border border-slate-700">LinkedIn</a>
-      <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-sm px-4 py-2 bg-cyan-600 hover:bg-cyan-500 rounded-lg text-white font-medium transition-colors">GitHub</a>
+  <style>
+    :root {
+      --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: #f8fafc;
+      color: #0f172a;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Subtle Architectural Grid Background */
+    .bg-grid-pattern {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(226, 232, 240, 0.6) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(226, 232, 240, 0.6) 1px, transparent 1px);
+    }
+
+    /* Modern Card Styles */
+    .glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.04), 0 1px 2px -1px rgba(0, 0, 0, 0.04);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-card:hover {
+      border-color: #cbd5e1;
+      box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+      transform: translateY(-2px);
+    }
+
+    .badge-mono {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: -0.01em;
+    }
+
+    /* Interactive button transitions */
+    .btn-primary {
+      background: #0284c7;
+      color: #ffffff;
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .btn-primary:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-900 bg-grid-pattern selection:bg-sky-500 selection:text-white">
+
+  <!-- Header / Navigation Bar -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div class="h-9 w-9 rounded-lg bg-sky-600 flex items-center justify-center font-mono font-bold text-white shadow-sm">
+          NP
+        </div>
+        <div>
+          <h1 class="text-base font-bold tracking-tight text-slate-900 leading-none">Nilesh Patil</h1>
+          <p class="text-xs font-medium text-slate-500 mt-0.5">Data Engineer & Data Scientist</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.linkedin.com/in/nilesh-patil-6ab4a0121/" target="_blank" rel="noreferrer" class="text-xs font-semibold px-3.5 py-2 bg-white text-slate-700 hover:text-sky-700 hover:bg-slate-50 border border-slate-300 rounded-lg shadow-sm transition">
+          LinkedIn
+        </a>
+        <a href="https://github.com/nileshpatil1206070" target="_blank" rel="noreferrer" class="text-xs font-semibold px-3.5 py-2 bg-slate-900 text-white hover:bg-slate-800 rounded-lg shadow-sm transition">
+          GitHub
+        </a>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
-    <!-- About Section -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-14">
+    
+    <!-- Hero Profile Section -->
+    <section class="glass-card rounded-2xl p-8 lg:p-10 border border-slate-200">
+      <div class="flex flex-col md:flex-row gap-8 items-start md:items-center">
+        
+        <!-- Profile Photo / Avatar -->
+        <div class="relative shrink-0">
+          <img 
+            src="https://avatars.githubusercontent.com/u/108398492?v=4" 
+            alt="Nilesh Patil" 
+            class="w-28 h-28 md:w-32 md:h-32 rounded-2xl object-cover border-2 border-white shadow-md ring-1 ring-slate-200"
+            onerror="this.src='https://ui-avatars.com/api/?name=Nilesh+Patil&background=0284c7&color=fff&size=128'"
+          />
+          <div class="absolute -bottom-2 -right-2 bg-emerald-500 text-white text-[10px] font-semibold px-2 py-0.5 rounded-full border-2 border-white shadow-sm">
+            Active
+          </div>
+        </div>
+
+        <!-- Bio & Key Stats -->
+        <div class="space-y-4 flex-1">
+          <div>
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-md bg-sky-50 text-sky-700 text-xs font-semibold border border-sky-200 mb-2">
+              <span>📍 Coventry, United Kingdom</span>
+              <span>•</span>
+              <span>MSc Data Science (Coventry University)</span>
+            </div>
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Data Engineer & Lakehouse Architect
+            </h2>
+          </div>
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed max-w-3xl">
+            Data Engineer with 2+ years of experience designing production Lakehouse architectures, Medallion pipelines, and high-performance Star Schemas on Databricks, Apache Spark, and AWS. Specialised in transforming unstructured, disparate data sources into governed, low-latency analytics layers.
+          </p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+              <span class="block text-xs font-medium text-slate-500">Industry Experience</span>
+              <span class="text-sm font-bold text-slate-900">2+ Years</span>
+            </div>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl">
+              <span class="block text-xs font-medium text-slate-500">Core Engine</span>
+              <span class="text-sm font-bold text-slate-900">Databricks & Spark</span>
+            </div>
+            <div class="p-3 bg-slate-50 border border-slate-200 rounded-xl col-span-2 sm:col-span-1">
+              <span class="block text-xs font-medium text-slate-500">Architecture</span>
+              <span class="text-sm font-bold text-slate-900">Medallion / Delta Lake</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Technical Stack & Skills -->
     <section class="space-y-4">
-      <h2 class="text-xl font-semibold text-cyan-300">About Me</h2>
-      <p class="text-slate-300 text-base leading-relaxed">
-        Data Engineer with 2+ years of experience specializing in building production Lakehouse architectures, Medallion pipelines, and scalable data models on Databricks, Spark, and AWS. Background includes an MSc in Data Science from Coventry University (UK), focused on turning disparate operational data into governed, BI-ready data layers.
-      </p>
-      <!-- Skills Badges -->
-      <div class="flex flex-wrap gap-2 pt-2">
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Databricks</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Apache Spark / PySpark</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Spark Declarative Pipelines (SDP)</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Medallion Architecture</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Unity Catalog</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Auto CDC / SCD</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Star Schema / Data Modeling</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">Amazon S3</span>
-        <span class="px-3 py-1 bg-slate-900 border border-slate-700 text-xs text-cyan-400 rounded-full font-mono">SQL & Python</span>
+      <h3 class="text-sm font-bold tracking-wider text-slate-500 uppercase">Core Technical Skills</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Databricks</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Spark Declarative Pipelines (SDP)</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Apache Spark / PySpark</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Medallion Lakehouse</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Unity Catalog</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Delta Lake & Auto CDC</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Dimensional Modeling (Star Schema)</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Amazon S3</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Microsoft Fabric & ADLS</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">SQL (Advanced)</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Python</span>
+        <span class="badge-mono px-3 py-1.5 bg-white border border-slate-200 text-slate-800 rounded-lg shadow-sm font-medium">Docker</span>
       </div>
     </section>
 
-    <!-- Featured Projects Section (2 Projects) -->
+    <!-- Featured Projects Grid (2 Production Projects) -->
     <section class="space-y-6">
-      <h2 class="text-xl font-semibold text-cyan-300">Featured Data Engineering Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-        <!-- Project 1: FMCG M&A Medallion Lakehouse -->
-        <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 hover:border-slate-700 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="flex flex-col gap-1">
-              <span class="text-xs text-cyan-400 font-mono">Databricks • Delta Lake • Medallion • Star Schema • AWS S3</span>
-              <h3 class="font-bold text-xl text-white">FMCG Acquisition Data Unification Lakehouse</h3>
-            </div>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Designed and deployed an end-to-end Medallion Lakehouse on Databricks to resolve multi-source data bottlenecks following the acquisition of a high-growth nutrition startup (Sportsbar) by a global sports equipment manufacturer (Atlikon).
-            </p>
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
-              <li><strong class="text-slate-200">Data Ingestion:</strong> Centralized chaotic multi-source inputs (APIs, CSV exports, spreadsheets) into Amazon S3 storage buckets.</li>
-              <li><strong class="text-slate-200">Processing Strategy:</strong> Built historical backfill pipelines for 5 months of batch data alongside an automated incremental pipeline for ongoing updates.</li>
-              <li><strong class="text-slate-200">Medallion Design:</strong> Implemented Bronze (raw), Silver (cleansed/validated), and Gold layers with Databricks Unity Catalog governance.</li>
-              <li><strong class="text-slate-200">Dimensional Modeling:</strong> Modeled a high-performance Star Schema (1 Fact Order table + 4 Dimension tables) merging startup and enterprise operations into a unified BI layer.</li>
-            </ul>
-          </div>
-          <div class="pt-4 border-t border-slate-800/80">
-            <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-xs font-semibold text-cyan-400 hover:underline inline-flex items-center gap-1">
-              View Repository & Architecture →
-            </a>
-          </div>
+      <div class="flex items-center justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-slate-900 tracking-tight">Production Lakehouse Projects</h3>
+          <p class="text-xs text-slate-500 mt-0.5">End-to-end data pipelines solving critical enterprise data integration bottlenecks</p>
         </div>
+      </div>
 
-        <!-- Project 2: Transportation SDP Lakehouse -->
-        <div class="p-6 bg-slate-900/60 rounded-xl border border-slate-800 hover:border-slate-700 flex flex-col justify-between space-y-4">
-          <div class="space-y-3">
-            <div class="flex flex-col gap-1">
-              <span class="text-xs text-cyan-400 font-mono">Spark Declarative Pipelines (SDP) • Unity Catalog • Auto CDC • PySpark</span>
-              <h3 class="font-bold text-xl text-white">Declarative Lakehouse & Auto-CDC Platform</h3>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Project 1: FMCG Lakehouse -->
+        <article class="glass-card rounded-2xl p-7 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-100 font-medium">Databricks</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Delta Lake</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">AWS S3</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Star Schema</span>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 tracking-tight">
+                FMCG M&A Data Unification & Medallion Lakehouse
+              </h4>
             </div>
-            <p class="text-slate-300 text-sm leading-relaxed">
-              Built an automated, declarative lakehouse pipeline using Databricks LakeFlow and Medallion Architecture for "Good Caps" transportation network, eliminating late operational reporting and manual query restructuring across regional hubs.
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Designed an end-to-end cloud Lakehouse to resolve severe multi-source data bottlenecks following the acquisition of a high-growth nutrition brand (Sportsbar) by a global manufacturing leader (Atlikon).
             </p>
-            <ul class="text-xs text-slate-400 space-y-2 list-disc list-inside">
-              <li><strong class="text-slate-200">Declarative Pipelines:</strong> Replaced procedural scripts with LakeFlow Spark Declarative Pipelines (SDP) and materialized views, letting Spark handle dependency management and execution optimization.</li>
-              <li><strong class="text-slate-200">Data Quality & CDC:</strong> Ingested dimensional and transactional files from S3 with automated <code class="text-cyan-400">cloudFiles</code>, applied Silver layer data quality Expectations, and implemented Auto CDC for slowly changing dimensions (SCD).</li>
-              <li><strong class="text-slate-200">Temporal & Aggregated Gold Views:</strong> Programmatically generated a custom calendar dimension and built Gold-layer aggregations (driver/passenger ratings, trip counts, regional revenue).</li>
-            </ul>
+
+            <div class="space-y-2.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Data Ingestion:</span>
+                <span>Centralized fragmented operational inputs (APIs, spreadsheets, CSVs) directly into scalable Amazon S3 storage buckets.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Pipeline Strategy:</span>
+                <span>Engineered batch pipelines for 5 months of historical backfilling coupled with continuous incremental loading.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Medallion Design:</span>
+                <span>Structured Bronze (raw ingest), Silver (cleansed/standardized), and Gold (BI aggregates) governed through Databricks catalogs.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Data Modeling:</span>
+                <span>Formed a high-performance Star Schema (1 Fact Order + 4 Dimensions) powering consolidated leadership dashboards.</span>
+              </div>
+            </div>
           </div>
-          <div class="pt-4 border-t border-slate-800/80">
-            <a href="https://github.com/nileshpatil1206070" target="_blank" class="text-xs font-semibold text-cyan-400 hover:underline inline-flex items-center gap-1">
-              View Repository & Architecture →
+
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="https://github.com/nileshpatil1206070" target="_blank" rel="noreferrer" class="text-xs font-semibold text-sky-600 hover:text-sky-800 inline-flex items-center gap-1 transition">
+              View Repository & Architecture ↗
             </a>
+            <span class="text-[11px] font-mono text-slate-400">Batch + Incremental ETL</span>
           </div>
-        </div>
+        </article>
+
+        <!-- Project 2: Transportation Declarative Lakehouse -->
+        <article class="glass-card rounded-2xl p-7 flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="space-y-2">
+              <div class="flex flex-wrap gap-1.5">
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-sky-50 text-sky-700 border border-sky-100 font-medium">Spark SDP</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">LakeFlow</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Unity Catalog</span>
+                <span class="badge-mono px-2.5 py-0.5 rounded bg-slate-100 text-slate-700 border border-slate-200">Auto CDC</span>
+              </div>
+              <h4 class="text-lg font-bold text-slate-900 tracking-tight">
+                Transportation Declarative Lakehouse & Auto-CDC Platform
+              </h4>
+            </div>
+
+            <p class="text-slate-600 text-sm leading-relaxed">
+              Engineered a declarative lakehouse data platform on Databricks using LakeFlow Spark Declarative Pipelines (SDP) to resolve data trust delays and eliminate manual reporting overhead for "Good Caps" transportation network.
+            </p>
+
+            <div class="space-y-2.5 pt-2 border-t border-slate-100 text-xs text-slate-600">
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Declarative SDP:</span>
+                <span>Replaced legacy procedural scripts with declarative target-state pipelines, automating optimization and task dependencies.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Ingestion & Expectations:</span>
+                <span>Automated S3 ingestion with <code class="bg-slate-100 px-1 py-0.5 rounded font-mono text-slate-800">cloudFiles</code>, applying programmatic data quality rules in Silver layer.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Automated CDC:</span>
+                <span>Managed Slowly Changing Dimensions (SCD) dynamically via Auto CDC flow, cutting scripting complexity.</span>
+              </div>
+              <div class="flex gap-2">
+                <span class="font-bold text-slate-900 shrink-0">• Aggregated Gold Views:</span>
+                <span>Generated automated calendar dimensions and regional KPIs (revenue, trip volumes, passenger ratings).</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+            <a href="https://github.com/nileshpatil1206070" target="_blank" rel="noreferrer" class="text-xs font-semibold text-sky-600 hover:text-sky-800 inline-flex items-center gap-1 transition">
+              View Repository & Architecture ↗
+            </a>
+            <span class="text-[11px] font-mono text-slate-400">LakeFlow Declarative Flow</span>
+          </div>
+        </article>
 
       </div>
     </section>
+
+    <!-- Experience & Education Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Work Experience -->
+      <div class="glass-card rounded-2xl p-7 space-y-5">
+        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+          <span>💼</span> Work Experience
+        </h3>
+        
+        <div class="space-y-6">
+          <div class="relative pl-6 border-l-2 border-slate-200 space-y-1">
+            <div class="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-sky-600"></div>
+            <div class="flex justify-between items-center">
+              <h4 class="text-sm font-bold text-slate-900">Data Engineer</h4>
+              <span class="badge-mono text-[11px] text-slate-500">2+ Years Exp</span>
+            </div>
+            <p class="text-xs text-slate-500">Enterprise Data Engineering & ETL/ELT Solutions</p>
+            <p class="text-xs text-slate-600 pt-1 leading-relaxed">
+              Engineered end-to-end data pipelines, structured data lakes in AWS/Azure environments, and maintained relational and dimensional models for executive reporting.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education & Qualifications -->
+      <div class="glass-card rounded-2xl p-7 space-y-5">
+        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+          <span>🎓</span> Education & Academic Background
+        </h3>
+
+        <div class="space-y-6">
+          <div class="relative pl-6 border-l-2 border-slate-200 space-y-1">
+            <div class="absolute -left-[5px] top-1 w-2 h-2 rounded-full bg-sky-600"></div>
+            <div class="flex justify-between items-center">
+              <h4 class="text-sm font-bold text-slate-900">MSc in Data Science</h4>
+              <span class="badge-mono text-[11px] text-slate-500">Coventry, UK</span>
+            </div>
+            <p class="text-xs font-medium text-sky-700">Coventry University, United Kingdom</p>
+            <p class="text-xs text-slate-600 pt-1 leading-relaxed">
+              Specialized in distributed data systems, machine learning architectures, statistical modeling, and large-scale data engineering principles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
   </main>
 
-  <footer class="text-center py-8 text-xs text-slate-500 border-t border-slate-900">
-    © 2026 Nilesh Patil • Hosted on GitHub Pages
+  <!-- Clean Footer -->
+  <footer class="mt-20 border-t border-slate-200 bg-white py-8 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <span>© 2026 Nilesh Patil • Built for Data Engineering & Lakehouse Roles</span>
+      <div class="flex gap-4">
+        <a href="https://www.linkedin.com/in/nilesh-patil-6ab4a0121/" target="_blank" rel="noreferrer" class="hover:text-slate-900">LinkedIn</a>
+        <a href="https://github.com/nileshpatil1206070" target="_blank" rel="noreferrer" class="hover:text-slate-900">GitHub</a>
+      </div>
+    </div>
   </footer>
 
 </body>
